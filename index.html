@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecommerce Website</title>
+    <!--CSS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=BhuTuka+Expanded+One&family=Dancing+Script:wght@600&display=swap" rel="stylesheet">    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+	<!--JavaScript-->
+    <script src="./javascript/script.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!--Header of page-->
+    <div class="header">
+        <img src="./img/logo.png" alt="logo">
+        <div class="search-bar">
+            <input type="text" name="search" id="search" placeholder="Products, Categories, etc...">
+            <input type="submit" name="Search-Btn" id="Search-Btn" value="Search">
+        </div>
+        <div class="head-right">
+            <button type="button" class="btn btn-primary" id="btn" onclick="change()">Login</button>
+            <a href="cart.html">
+                <img src="./img/shopping_cart.png" alt="shopping_cart">
+            </a>
+        </div>
+    </div>
+    <!--navigation bar-->
+    <nav class="navbar navbar-expand-lg" style="background-color: rgb(232, 241, 232);">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="nav navbar-nav me-auto mb-2 mb-lg-0 justify-content-around">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="products.html">All Products</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Women</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">All</a></li>
+                            <li><a class="dropdown-item" href="#">Dresses</a></li>
+                            <li><a class="dropdown-item" href="#">Pants</a></li>
+                            <li><a class="dropdown-item" href="#">Skirts</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Men</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">All</a></li>
+                            <li><a class="dropdown-item" href="#">Shirts</a></li>
+                            <li><a class="dropdown-item" href="#">Pants</a></li>
+                            <li><a class="dropdown-item" href="#">Hoodies</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Kids</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!--main content-->
+    <div class="body">
+        <h1>Ecommerce</h1>
+        <h3 id="slogan">Fashion As Unique As You Are</h3>
+    </div>
+
+    <div class="featured text-center">
+        <h3 class="fw-bold mb-0 pb-0">Featured Products</h3>
+        <!--slider for featured products-->
+        <div id="carouselExampleControls" class="carousel slide py-3" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active w-100">
+                    <!--product groups for each slider-->
+                    <div class="card-group">
+                        <div class="card shadow-sm bg-body rounded">
+                            <img class="card-img-top" src="./img/black shirt.jpg" alt="black shirt">
+                            <div class="card text-center">
+                                <div class="card-body">
+                                    <h5 class="card-title">Black Shirt</h5>
+                                    <p>$18</p>
+                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In suscipit congue elit.</p>
+                                    <button type="button" class="btn btn-primary add-to-cart-btn">
+                                        <img src="./img/shopping_cart.png" alt="shopping_cart">
+                                        Add To Cart
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card shadow-sm bg-body rounded">
+                            <img class="card-img-top" src="./img/black solid jacket.jpg" alt="black solid jacket">
+                            <div class="card text-center">
+                                <div class="card-body">
+                                    <h5 class="card-title">Black Jacket</h5>
+                                    <p>$22</p>
+                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In suscipit congue elit.</p>
+                                    <button type="button" class="btn btn-primary add-to-cart-btn">
+                                        <img src="./img/shopping_cart.png" alt="shopping_cart">
+                                        Add To Cart
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card shadow-sm bg-body rounded">
+                            <img class="card-img-top" src="./img/cardigan sweaters.jfif" alt="Cardigan Sweater">
+                            <div class="card text-center">
+                                <div class="card-body">
+                                    <h5 class="card-title">Cardigan Sweater</h5>
+                                    <p>$25</p>
+                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In suscipit congue elit.</p>
+                                    <button type="button" class="btn btn-primary add-to-cart-btn">
+                                        <img src="./img/shopping_cart.png" alt="shopping_cart">
+                                        Add To Cart
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card shadow-sm bg-body rounded">
+                            <img class="card-img-top" src="./img/classical trendy dress.jpg" alt="classical trendy dress">
+                            <div class="card text-center">
+                                <div class="card-body">
+                                    <h5 class="card-title">Classical Dress</h5>
+                                    <p>$15</p>
+                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In suscipit congue elit.</p>
+                                    <button type="button" class="btn btn-primary add-to-cart-btn">
+                                        <img src="./img/shopping_cart.png" alt="shopping_cart">
+                                        Add To Cart
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card shadow-sm bg-body rounded">
+                            <img class="card-img-top" src="./img/fur sweater.jfif" alt="fur sweater">
+                            <div class="card text-center">
+                                <div class="card-body">
+                                    <h5 class="card-title">Fur Sweater</h5>
+                                    <p>$28</p>
+                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In suscipit congue elit.</p>
+                                    <button type="button" class="btn btn-primary add-to-cart-btn">
+                                        <img src="./img/shopping_cart.png" alt="shopping_cart">
+                                        Add To Cart
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="card-group">
+                        <div class="card shadow-sm bg-body rounded">
+                            <img class="card-img-top" src="./img/laura vintage sweaters.jpg" alt="laura vintage sweater">
+                            <div class="card text-center">
+                                <div class="card-body">
+                                    <h5 class="card-title">Vintage Sweater</h5>
+                                    <p>$40</p>
+                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In suscipit congue elit.</p>
+                                    <button type="button" class="btn btn-primary add-to-cart-btn">
+                                        <img src="./img/shopping_cart.png" alt="shopping_cart">
+                                        Add To Cart
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card shadow-sm bg-body rounded">
+                            <img class="card-img-top" src="./img/pullover sweater.jfif" alt="pullover sweater">
+                            <div class="card text-center">
+                                <div class="card-body">
+                                    <h5 class="card-title">Pullover Sweater</h5>
+                                    <p>$35</p>
+                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In suscipit congue elit.</p>
+                                    <button type="button" class="btn btn-primary add-to-cart-btn">
+                                        <img src="./img/shopping_cart.png" alt="shopping_cart">
+                                        Add To Cart
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card shadow-sm bg-body rounded">
+                            <img class="card-img-top" src="./img/Mens Jacket.jpg" alt="Men's Jacket">
+                            <div class="card text-center">
+                                <div class="card-body">
+                                    <h5 class="card-title">Men's Jacket</h5>
+                                    <p>$38</p>
+                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In suscipit congue elit.</p>
+                                    <button type="button" class="btn btn-primary add-to-cart-btn">
+                                        <img src="./img/shopping_cart.png" alt="shopping_cart">
+                                        Add To Cart
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card shadow-sm bg-body rounded">
+                            <img class="card-img-top" src="./img/Red Fleece Hooded Jacket.jpg" alt="Red Fleece Hooded Jacket">
+                            <div class="card text-center">
+                                <div class="card-body">
+                                    <h5 class="card-title">Hooded Jacket</h5>
+                                    <p>$30</p>
+                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In suscipit congue elit.</p>
+                                    <button type="button" class="btn btn-primary add-to-cart-btn">
+                                        <img src="./img/shopping_cart.png" alt="shopping_cart">
+                                        Add To Cart
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card shadow-sm bg-body rounded">
+                            <img class="card-img-top" src="./img/women's ethinic dress.jpg" alt="Women's Ethnic Dress">
+                            <div class="card text-center">
+                                <div class="card-body">
+                                    <h5 class="card-title">Ethnic Dress</h5>
+                                    <p>$28</p>
+                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In suscipit congue elit.</p>
+                                    <button type="button" class="btn btn-primary add-to-cart-btn">
+                                        <img src="./img/shopping_cart.png" alt="shopping_cart">
+                                        Add To Cart
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="card-group">
+                        <div class="card shadow-sm bg-body rounded">
+                            <img class="card-img-top" src="./img/sweatshirt.jpg" alt="sweatshirt">
+                            <div class="card text-center">
+                                <div class="card-body">
+                                    <h5 class="card-title">Sweatshirt</h5>
+                                    <p>$30</p>
+                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In suscipit congue elit.</p>
+                                    <button type="button" class="btn btn-primary add-to-cart-btn">
+                                        <img src="./img/shopping_cart.png" alt="shopping_cart">
+                                        Add To Cart
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card shadow-sm bg-body rounded">
+                            <img class="card-img-top" src="./img/women's formal shirt.jpg" alt="women's formal shirt">
+                            <div class="card text-center">
+                                <div class="card-body">
+                                    <h5 class="card-title">Formal Shirt</h5>
+                                    <p>$32</p>
+                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In suscipit congue elit.</p>
+                                    <button type="button" class="btn btn-primary add-to-cart-btn">
+                                        <img src="./img/shopping_cart.png" alt="shopping_cart">
+                                        Add To Cart
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card shadow-sm bg-body rounded">
+                            <img class="card-img-top" src="./img/mens jacket casual stand collar hooded.jpg" alt="Men's Casual Jacket">
+                            <div class="card text-center">
+                                <div class="card-body">
+                                    <h5 class="card-title">Casual Jacket</h5>
+                                    <p>$35</p>
+                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In suscipit congue elit.</p>
+                                    <button type="button" class="btn btn-primary add-to-cart-btn">
+                                        <img src="./img/shopping_cart.png" alt="shopping_cart">
+                                        Add To Cart
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card shadow-sm bg-body rounded">
+                            <img class="card-img-top" src="./img/round neck black t-shirt.jpg" alt="round neck black t-shirt">
+                            <div class="card text-center">
+                                <div class="card-body">
+                                    <h5 class="card-title">Black T-shirt</h5>
+                                    <p>$18</p>
+                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In suscipit congue elit.</p>
+                                    <button type="button" class="btn btn-primary add-to-cart-btn">
+                                        <img src="./img/shopping_cart.png" alt="shopping_cart">
+                                        Add To Cart
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card shadow-sm bg-body rounded">
+                            <img class="card-img-top" src="./img/pocket-shirt.jpg" alt="pocket-shirt">
+                            <div class="card text-center">
+                                <div class="card-body">
+                                    <h5 class="card-title">Pocket Shirt</h5>
+                                    <p>$28</p>
+                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In suscipit congue elit.</p>
+                                    <button type="button" class="btn btn-primary add-to-cart-btn">
+                                        <img src="./img/shopping_cart.png" alt="shopping_cart">
+                                        Add To Cart
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev h-75 d-flex align-item-center" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </button>
+            <button class="carousel-control-next h-75 d-flex align-item-center" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </button>
+        </div>
+    </div>
+
+    <!--footer of the page-->
+    <div class="footer">
+        <div class="top">
+            <div class="women">
+                <a href="#"><h3>Women</h3></a>
+                <a href="#"><p>Dresses</p></a>
+                <a href="#"><p>Pants</p></a>
+                <a href="#"><p>Skirts</p></a>
+            </div>
+            <div class="men">
+                <a href="#"><h3>Men</h3></a>
+                <a href="#"><p>Shirts</p></a>
+                <a href="#"><p>Pants</p></a>
+                <a href="#"><p>Hoodies</p></a>
+            </div>
+            <div class="kids"><a href="#"><h3>Kids</h3></a></div>
+            <div class="links">
+                <a href="#"><h3>Links</h3></a>
+                <a href="#"><p>Home</p></a>
+                <a href="login.html"><p>Login</p></a>
+                <a href="contact.html"><p>Contact</p></a>
+            </div>
+        </div>
+        <p style="color: white;">Copyright &#169; Ecommerce 2022-23</p>
+    </div>
+</body>
+</html>

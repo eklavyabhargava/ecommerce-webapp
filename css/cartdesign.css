@@ -1,0 +1,55 @@
+/* style for cart page */
+.card-group {
+    display: flex;
+    flex-direction: row;
+}
+
+.card-group .card-box {
+    border: 1px solid black;
+    margin: 20px;
+}
+
+.card-text {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.quantity {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    height: 5%;
+}
+
+.quantity > input {
+    height: 70%;
+}
+
+.quantity > img {
+    height: 70%;
+}
+
+.operator {
+    background-color: rgb(177, 214, 90);
+    margin: 0 10px;
+    padding: 2px;
+    width: 30px;
+}
+
+table {
+    width: 100%;
+}
+
+th {
+    text-align: left;
+}
+
+td {
+    text-align: right;
+}
+
+@media only screen and (max-width: 1180px) {
+    .card-group {
+        display: flex;
+        flex-direction: column;
+    }
+}

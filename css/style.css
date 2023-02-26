@@ -1,0 +1,303 @@
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+/* set navigation's margin top & bottom to 0 and width to 50 */
+.nav {
+    margin: 0 auto;
+    width: 50%;
+}
+
+.nav-item {
+    font-size: 17px;
+}
+
+/* property for header of page */
+.header {
+    display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: space-between;
+    width: 100%;
+    background-color: #FAF3E9;
+}
+
+/* style for logo image */
+.header > img {
+    margin: 5px 10px;
+    height: 50px;
+}
+
+/* style for search bar */
+.search-bar {
+    margin: auto 15px;
+    height: 50%;
+}
+
+/* style for input of search bar */
+.search-bar > input[type=text]{
+    margin-right: 0;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    background-color: rgb(224, 224, 224);
+}
+
+/* when mouse clicked on input of search bar */
+.search-bar > input[type=text]:focus{
+    background-color: white;
+}
+
+/* style for search button */
+.search-bar > input[type=submit]{
+    margin-left: 0;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: rgb(255, 174, 174);
+    font-weight: 600;
+}
+
+.search-bar > input[type=submit]:hover{
+    background-color: rgb(243, 149, 149);
+}
+
+/* for login button & cart icon */
+.head-right {
+    margin: auto 10px;
+    height: 50%;
+}
+
+/* style for login button on header of the page */
+.head-right > button{
+    margin: auto 5px;
+    padding: 3px 15px;
+    border-radius: 5px;
+    color: black;
+    border: none;
+    background-color: rgb(255, 136, 136);
+}
+
+.head-right > button:hover{
+    color: black;
+    background-color: rgb(255, 174, 174);
+}
+
+/* style for cart icon of page header */
+.head-right > a > img {
+    margin: auto 5px;
+    height: 30px;
+}
+
+.dropdown-menu {
+    background-color: rgb(224, 228, 224);
+}
+
+/* main body style */
+.body {
+    background:
+        /* top, transparent black, faked with gradient */ 
+        linear-gradient(
+          rgba(0, 0, 0, 0.5), 
+          rgba(0, 0, 0, 0.5)
+        ),
+        /* bottom, image */
+        url(../img/clothes.jpg);
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 15%;
+}
+
+/* main body heading style */
+h1 {
+    color: rgb(241, 229, 245);
+    font-family: 'Dancing Script', cursive;
+    text-align: center;
+    font-size: 10vw;
+}
+
+/* style for slogan on main body */
+#slogan {
+    color: white;
+    text-align: center;
+    font-family: 'BhuTuka Expanded One', cursive;
+}
+
+.featured {
+    background-color: #e1e1e1;
+}
+
+.featured > h3 {
+    padding: 15px 0;
+    text-align: center;
+}
+
+/* products style */
+.group-products {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    column-gap: 10px;
+    row-gap: 15px;
+    padding: 10px;
+    width: 100%;
+}
+
+/* products design */
+#product {
+    width: 100%;
+    background-color: white;
+}
+
+#product > p {
+    margin: 0 auto;
+    padding: 0 10px;
+    text-align: center;
+}
+
+#product > img {
+    height: 50%;
+    width: 100%;
+}
+
+/* style for cards */
+.card {
+    margin: 0 10px;
+    border: none;
+}
+
+.card-group > .card > img {
+    height: 320px;
+}
+
+/* style for group of cards together */
+.card-group {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+}
+
+.add-to-cart-btn {
+    background-color: #acb840;
+    border: none;
+    margin: 15px 10%;
+    font-size: 15px;
+    width: 80%;
+    color: black;
+}
+
+.btn > img {
+    width: 25px;
+}
+
+
+/* footer style */
+.footer {
+    display: grid;
+    grid-template-rows: auto auto;
+    background-color: rgb(37, 37, 37);
+    text-align: center;
+}
+
+/* footer top design */
+.top {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    text-align: center;
+    padding-bottom: 30px;
+    padding-top: 10px;
+    border-bottom: 2px solid rgb(242, 242, 242);
+}
+
+.women > a, .men > a, .kids > a, .links > a {
+    text-decoration: none;
+    color: white;
+    padding-bottom: 15px;
+}
+
+/* design for screen resolution min than 991px */
+@media screen and (max-width: 991px) {
+    /* change header item direction */
+    .header {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .header > img, .search-bar, .head-right{
+        margin-bottom: 10px;
+        margin-top: 2px;
+        margin: 2px auto 10px auto;
+        width: 75%;
+    }
+
+    .header > img {
+        height: auto;
+    }
+
+    .search-bar {
+        display: flex;
+        flex-wrap: nowrap;
+        margin: 15px auto 0 auto;
+    }
+
+    .head-right {
+        margin: 15px auto;
+    }
+    
+    .search-bar > input[type=submit] {
+        margin: auto 3px;
+    }
+
+    .nav {
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    /* display only 2 cards of card-group */
+    .card-group {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto 0 0;
+    }
+
+    /* display only 3 items of group-items */
+    .group-products {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        column-gap: 10px;
+        row-gap: 15px;
+        padding: 10px;
+        width: 100%;
+    }
+
+    /* display footer top links in column */
+    .top {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding-bottom: 30px;
+        padding-top: 10px;
+        border-bottom: 2px solid rgb(242, 242, 242);
+    }
+}
+
+/* design for screen resolution min than 700px */
+@media screen and (max-width: 700px) {
+    /* display only 1 card of card-groups of featured products */
+    .card-group {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto 0 0 0 0;
+    }
+
+    /* display only 2 items of all products in 1 row */
+    .group-products {
+        display: grid;
+        grid-template-columns: auto auto;
+        column-gap: 10px;
+        row-gap: 15px;
+        padding: 10px;
+        width: 100%;
+    }
+}

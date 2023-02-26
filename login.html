@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecommerce Website</title>
+    <!--CSS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=BhuTuka+Expanded+One&family=Dancing+Script:wght@600&display=swap" rel="stylesheet">    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <style>
+        form {
+            margin: auto 20%;
+            width: 60%;
+        }
+        .form-group, .btn {
+            margin: 0 auto 15px auto;
+        }
+    </style>
+	<!--JavaScript-->
+    <script src="./javascript/script.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!--header of the page-->
+    <div class="header">
+        <img src="./img/logo.png" alt="logo">
+        <div class="search-bar">
+            <input type="text" name="search" id="search" placeholder="Products, Categories, etc...">
+            <input type="submit" name="Search-Btn" id="Search-Btn" value="Search">
+        </div>
+        <div class="head-right">
+            <button type="button" class="btn btn-primary" id="btn" onclick="change()">Login</button>
+            <a href="cart.html">
+                <img src="./img/shopping_cart.png" alt="shopping_cart">
+            </a>
+        </div>
+    </div>
+
+    <!--navigation bar-->
+    <nav class="navbar navbar-expand-lg" style="background-color: rgb(232, 241, 232);">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="nav navbar-nav me-auto mb-2 mb-lg-0 justify-content-around">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="products.html">All Products</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Women</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">All</a></li>
+                            <li><a class="dropdown-item" href="#">Dresses</a></li>
+                            <li><a class="dropdown-item" href="#">Pants</a></li>
+                            <li><a class="dropdown-item" href="#">Skirts</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Men</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">All</a></li>
+                            <li><a class="dropdown-item" href="#">Shirts</a></li>
+                            <li><a class="dropdown-item" href="#">Pants</a></li>
+                            <li><a class="dropdown-item" href="#">Hoodies</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Kids</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!--login form-->
+    <h3 style="text-align: center; margin: 18px;">Login</h3>
+    <form>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+        </div>
+        <button type="submit" class="btn btn-primary btn-md btn-block" style="width: 100%; background-color: rgb(178, 203, 66); border: none;" onclick="authenticate()">Login</button>
+    </form>
+
+    <!--footer of the page-->
+    <div class="footer">
+        <div class="top">
+            <div class="women">
+                <a href="#"><h3>Women</h3></a>
+                <a href="#"><p>Dresses</p></a>
+                <a href="#"><p>Pants</p></a>
+                <a href="#"><p>Skirts</p></a>
+            </div>
+            <div class="men">
+                <a href="#"><h3>Men</h3></a>
+                <a href="#"><p>Shirts</p></a>
+                <a href="#"><p>Pants</p></a>
+                <a href="#"><p>Hoodies</p></a>
+            </div>
+            <div class="kids"><a href="#"><h3>Kids</h3></a></div>
+            <div class="links">
+                <a href="#"><h3>Links</h3></a>
+                <a href="index.html"><p>Home</p></a>
+                <a href="login.html"><p>Login</p></a>
+                <a href="contact.html"><p>Contact</p></a>
+            </div>
+        </div>
+        <p style="color: white;">Copyright &#169; Ecommerce 2022-23</p>
+    </div>
+</body>
+</html>
